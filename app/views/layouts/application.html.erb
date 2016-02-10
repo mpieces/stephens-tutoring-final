@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Stephen</title>
+  <title><%= @page_title || "Stephen's Tutoring" %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 </head>
 <body>
+  <div id="header">
+    <div id="title">Stephen Ramon's Tutoring Services</div>
+  </div>
+  <div id="navbar">
+    <ul>
+      <li><a href="/">Schedule</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/subjects">Subjects</a></li>
+      <li><a href="/about">About Me</a></li>
+      <li><a href="/testimonials">Testimonials</a></li>
+    </ul>
+  </div>
 
-<%= yield %>
+  <div id="r-navbar">
+    <ul>
+      <li><a href="#">Log Out</a></li>
+    </ul>
+  </div>
+
+  <div id="home">
+    <h1>How it Works:</h1>
+    <hr>
+    <ul>
+      <li>Book a session online.</li>
+      <li>If it's last minute, just call or text me @ 214.686.7245.</li>
+      <li>I come to your home.</li>
+      <li>We study hard.</li>
+    </ul>
+  </div>
+
+  <div id="content">
+    <%= yield %>
+  </div>
 
 </body>
 </html>
