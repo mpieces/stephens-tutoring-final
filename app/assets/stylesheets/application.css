@@ -66,15 +66,22 @@ body {
 #title {
   font-family: "Raleway", sans-serif;
   font-size: 2em;
-  font-weight: ;
   color: white;
   font-weight: lighter;
-  /*line-height: 52px;*/
   text-align: center;
-  padding-top: 120px;
+  padding-top: 110px;
 
 }
 
+#subtitle {
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  font-weight: lighter;
+  color: #c7c0de;
+  text-align: center;
+  padding-top: 10px;
+
+}
 #navbar ul {
   position: absolute;
   top: 0;
@@ -139,16 +146,16 @@ ul, li, p {
   font-size: 1em;
 }
 
-h1 {
+h1, h2, h3 {
   font-family: "Raleway", sans-serif;
   color: #4c4c4c;
   font-weight: lighter;
-  font-size: 1.5em;
+  /*font-size: 1.5em;*/
 }
 
 hr {
     height: 1px;
-    margin: 2em 0;
+    margin: 1em 0;
     border: 0;
     background: -webkit-linear-gradient(left, transparent, rgba(0,0,0,0.09) 10%, rgba(0,0,0,0.09) 90%, transparent);
 }
@@ -177,9 +184,33 @@ hr {
   text-align: center;
 }
 
-#calendar {
+#book:hover {
+  background: #3b2f63;
+}
+
+/*#calendar {
   position: absolute;
   top: 300px;
   right: 25%;
   left: 25%;
+}*/
+
+#contact {
+  text-align: center;
+}
+
+.subjects {
+  width: 500px;
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#about {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+
 }
