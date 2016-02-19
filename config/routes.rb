@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
 
+  get 'users/new'
+
   root 'home#index'
 
-  get '/schedule' => 'home#schedule'
+
   get '/contact' => 'home#contact'
   get '/subjects' => 'home#subjects'
   get '/about' => 'home#about'
   get '/testimonials' => 'home#testimonials'
+  get '/signup' => 'users#new'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
