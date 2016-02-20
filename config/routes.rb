@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-
+  get '/howitworks' => 'home#howitworks'
   get '/contact' => 'home#contact'
   get '/subjects' => 'home#subjects'
   get '/about' => 'home#about'

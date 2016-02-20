@@ -2,34 +2,38 @@
 
 
 <div class="signup_form">
-  <%= form_for(@user) do |f| %>
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
-
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
-
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-
-    <%= f.label :phone %>
-    <%= f.phone_field :phone %>
-
-    <%= f.label :address %>
-    <%= f.text_field :address %>
-
-    <%= f.label :city %>
-    <%= f.text_field :city %>
-
-    <%= f.label :zip %>
-    <%= f.text_field :zip %>
-
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-
-    <%= f.label :password_confirmation, "Confirmation" %>
-    <%= f.password_field :password_confirmation %>
-    <br>
-    <%= f.submit "Create my account", class: "button" %>
-  <% end %>
+          <%= form_for(@user) do |f| %>
+            <%= render 'shared/error_messages' %>
+            <div class="form-group">
+                <%= f.text_field :first_name, :placeholder => "First name" %><br />
+            </div>
+            <div class="form-group">
+                <%= f.text_field :last_name, :placeholder => "Last name" %><br />
+            </div>
+            <div class="form-group">
+                <%= f.email_field :email, :placeholder => "Email" %><br />
+            </div>
+            <div class="form-group">
+                <%= f.phone_field :phone, :placeholder => "Phone" %><br />
+            </div>
+            <div class="form-group">
+                <%= f.text_field :address, :placeholder => "Street address" %><br />
+            </div>
+            <div class="form-group">
+                <%= f.text_field :city, :placeholder => "City" %><br />
+            </div>
+            <div class="form-group">
+                <%= f.text_field :zip, :placeholder => "Zip code" %><br />
+            </div>
+            <div class="form-group">
+                <%= f.password_field :password, :placeholder => "Password" %><br />
+            </div>
+            <div class="form-group">
+                <%= f.password_field :password_confirmation, :placeholder => "Confirm password" %><br />
+            </div>
+        <div class="form-control">
+            <br>
+            <%= f.submit "Create my account", class: "button" %>
+        </div>
+          <% end %>
 </div>

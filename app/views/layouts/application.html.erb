@@ -12,39 +12,28 @@
     <div id="title">Stephen Ramon's Tutoring Services</div>
     <div id="subtitle">for students in Park Cities and surrouding areas</div>
   </div>
+ <!--  Left navbar -->
   <div id="navbar">
     <ul>
       <li><%= link_to "Home", root_path %>
+      <li><%= link_to "How it Works", howitworks_path %>
       <li><%= link_to "Contact", contact_path %>
       <li><%= link_to "Subjects", subjects_path %>
       <li><%= link_to "About Me", about_path %>
       <li><%= link_to "Testimonials", testimonials_path %>
     </ul>
   </div>
-
+<!-- Right navbar -->
   <div id="r-navbar">
     <ul>
       <li><a href="#">Log Out</a></li>
     </ul>
   </div>
 
-  <div id="home">
-    <h2>How it Works:</h2>
-    <hr>
-    <ul>
-      <li>Book a session online.</li>
-      <li>If it's last minute, just call or text me @ 214.686.7245.</li>
-      <li>I come to your home.</li>
-      <li>We study hard.</li>
-      <br>
-      <li>Sessions are 55 minutes long.</li>
-      <li>There is a $20 fee for cancellations within 12 hours of booked session.</li>
-      <li>Schedule subject to change.</li>
-    </ul>
-  </div>
+
 
   <%= link_to "Sign in", '#' %>
-  <%= link_to "Sign up Now", 'signup_path', class: 'register-buttons' %>
+  <%= link_to "Sign up Now", signup_path, class: 'register-buttons' %>
 
 
   <div id="content">

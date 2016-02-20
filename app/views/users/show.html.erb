@@ -1,2 +1,19 @@
-<% gravatar_for @user %>
-<%= @user.first_name %> <%= @user.last_name %> <%= @user.email %>
+<div class="row">
+  <aside class="span">
+    <section>
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+      <h1>
+        <% gravatar_for @user %>
+        <%= @user.first_name %>
+        <%= @user.last_name %>
+        <%= @user.email %>
+        <%= @user.phone %>
+        <%= @user.address %>
+        <%= @user.city %>
+        <%= @user.zip %>
+      </h1>
+    </section>
+  </aside>
+</div>
