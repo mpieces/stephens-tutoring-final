@@ -24,16 +24,24 @@
     </ul>
   </div>
 <!-- Right navbar -->
+<% if signed_in? %>
   <div id="r-navbar">
     <ul>
-      <li><a href="#">Log Out</a></li>
+      <li><%= link_to "Sign Out", signout_path, method: "delete" %></li>
     </ul>
   </div>
+<% end %>
 
 
+  <% if signed_in? %>
+    <%= link_to "Users", '#' %>
+    <%= link_to "Settings", '#' %>
+    <%= link_to "Profile", current_user %>
+  <% else %>
+    <%= link_to "Sign In", signin_path, class: 'register-buttons' %>
+    <%= link_to "Sign Up", signup_path, class: 'register-buttons' %>
+  <% end %>
 
-  <%= link_to "Sign in", '#' %>
-  <%= link_to "Sign up Now", signup_path, class: 'register-buttons' %>
 
 
   <div id="content">
