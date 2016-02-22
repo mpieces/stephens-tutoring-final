@@ -11,8 +11,10 @@ Rails.application.routes.draw do
   get '/about' => 'home#about'
   get '/testimonials' => 'home#testimonials'
   get '/signup' => 'users#new'
-  get '/signin' => 'sessions#new'
-  get '/signout' => 'sessions#destroy', via: :delete
+  get 'signin' => 'sessions#new'
+  post 'signin' => 'sessions#create'
+  delete '/signout' => 'sessions#destroy'
+  # post 'users/:id/update' => 'users#update'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,10 +1,14 @@
+<% if signed_in? == false %>
 
-
-<div id="book">
-  <a href="https://calendar.google.com/calendar/selfsched?sstoken=UUtnalJQZUVlVXR6fGRlZmF1bHR8MTc4NzJjMzc5OTg1ZDJjMTFmZTZiOTU0ZTI4NDEzODY" target="_blank"><h1>Book Now!</h1></a>
+<div class="register-buttons">
+      <%= link_to "Log In", signin_path, id: 'login' %>
+      <%= link_to "Sign Up", signup_path, id: 'signup' %>
 </div>
+<% end %>
 
-<div class="owl-carousel">
+
+
+<!-- <div class="owl-carousel">
   <div>Content</div>
   <div>Content</div>
   <div>Content</div>
@@ -12,7 +16,7 @@
   <div>Content</div>
   <div>Content</div>
   <div>Content</div>
-</div>
+</div> -->
 
 
 

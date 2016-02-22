@@ -1,6 +1,13 @@
+<div class="form">
 <h1>Sign In</h1>
 
-<%= form_for(:session, url: sessions_path) do |f| %>
+<%= form_for(:session, url: signin_path) do |f| %>
+    <!--  no Session model, therefore no analogue for the @user variable;
+    form_for different than sign up form; have to give form_for more information -->
+  <!--   :session = name of the resource
+    sessions_path = corresponding URI -->
+
+
   <div class="form-group">
     <%= f.email_field :email, :placeholder => "Email" %><br />
   </div>
@@ -14,3 +21,6 @@
 <br />
 
 <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+<br>
+<p><%= link_to "Back", root_url %></p>
+</div>

@@ -1,7 +1,6 @@
-<div class="form">
-<h1>Sign Up</h1>
+<h1>Update your Profile</h1>
 
-          <%= form_for(@user) do |f| %>
+ <%= form_for(@user) do |f| %>
             <%= render 'shared/error_messages' %>
             <div class="form-group">
                 <%= f.text_field :first_name, :placeholder => "First name" %><br />
@@ -30,12 +29,9 @@
             <div class="form-group">
                 <%= f.password_field :password_confirmation, :placeholder => "Confirm password" %><br />
             </div>
-        <div class="form-control">
-            <br>
-            <%= f.submit "Create my account", class: "button" %>
-        </div>
-          <% end %>
-        <br>
-        <p><%= link_to "Back", root_url %></p>
 
-</div>
+            <div class="form-control">
+            <br>
+              <%= f.submit "Save Changes", class: "button" %>
+            </div>
+<% end %>

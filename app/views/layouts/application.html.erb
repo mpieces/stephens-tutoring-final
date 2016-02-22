@@ -27,20 +27,13 @@
 <% if signed_in? %>
   <div id="r-navbar">
     <ul>
-      <li><%= link_to "Sign Out", signout_path, method: "delete" %></li>
+      <li><%= link_to "My Profile", user_path(current_user) %></li>
+      <li><%= link_to "Sign Out", signout_path, method: :delete %></li>
     </ul>
   </div>
 <% end %>
 
 
-  <% if signed_in? %>
-    <%= link_to "Users", '#' %>
-    <%= link_to "Settings", '#' %>
-    <%= link_to "Profile", current_user %>
-  <% else %>
-    <%= link_to "Sign In", signin_path, class: 'register-buttons' %>
-    <%= link_to "Sign Up", signup_path, class: 'register-buttons' %>
-  <% end %>
 
 
 

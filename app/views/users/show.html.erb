@@ -1,19 +1,26 @@
-<div class="row">
-  <aside class="span">
-    <section>
+<div class="profile">
+  <h1><%= @user.first_name %>'s Profile</h1>
+  <hr>
+
       <% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>
       <% end %>
-      <h1>
-        <% gravatar_for @user %>
-        <%= @user.first_name %>
-        <%= @user.last_name %>
-        <%= @user.email %>
-        <%= @user.phone %>
-        <%= @user.address %>
-        <%= @user.city %>
-        <%= @user.zip %>
-      </h1>
-    </section>
-  </aside>
+
+
+        <h1>Name: <%= @user.first_name %>
+        <%= @user.last_name %></h1>
+        <h1>Email: <%= @user.email %></h1>
+        <h1>Phone: <%= @user.phone %></h1>
+        <h1>Address: <%= @user.address %></h1>
+        <h1><%= @user.city %>,
+        <%= @user.zip %></h1>
+
+
+</br>
+  <%= button_to "Edit Profile", edit_user_path(current_user), method: :get %>
+
+</div>
+
+<div id="book">
+  <a href="https://calendar.google.com/calendar/selfsched?sstoken=UUtnalJQZUVlVXR6fGRlZmF1bHR8MTc4NzJjMzc5OTg1ZDJjMTFmZTZiOTU0ZTI4NDEzODY" target="_blank"><h1>Book Now!</h1></a>
 </div>
