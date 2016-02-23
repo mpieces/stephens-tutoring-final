@@ -1,22 +1,22 @@
 <div class="profile">
+  <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+<br>
+<br>
   <h1><%= @user.first_name %>'s Profile</h1>
   <hr>
 
-      <% flash.each do |key, value| %>
-        <div class="alert alert-<%= key %>"><%= value %></div>
-      <% end %>
+        <h2>Name: <%= @user.first_name %>
+        <%= @user.last_name %></h2>
+        <h2>Year: <%= @user.year %>
+        <h2>Email: <%= @user.email %></h2>
+        <h2>Phone: <%= @user.phone %></h2>
+        <h2>Address: <%= @user.address %></h2>
+        <h2><%= @user.city %>, <%= @user.zip %></h2>
 
 
-        <h1>Name: <%= @user.first_name %>
-        <%= @user.last_name %></h1>
-        <h1>Email: <%= @user.email %></h1>
-        <h1>Phone: <%= @user.phone %></h1>
-        <h1>Address: <%= @user.address %></h1>
-        <h1><%= @user.city %>,
-        <%= @user.zip %></h1>
-
-
-</br>
+  </br>
   <%= button_to "Edit Profile", edit_user_path(current_user), method: :get %>
 
 </div>

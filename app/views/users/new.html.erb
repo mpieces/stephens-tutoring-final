@@ -10,6 +10,10 @@
                 <%= f.text_field :last_name, :placeholder => "Last name" %><br />
             </div>
             <div class="form-group">
+                <%= f.select :year, User::YEARS, prompt: 'Select current grade: ' %>
+            </div>
+
+            <div class="form-group">
                 <%= f.email_field :email, :placeholder => "Email" %><br />
             </div>
             <div class="form-group">

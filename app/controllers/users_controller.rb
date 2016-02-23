@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   # before_filter :signed_in_user, only: [:edit, :update]
   # before_filter :correct_user, only: [:edit, :update]
 
-
   def new
     @user = User.new
   end
@@ -42,7 +41,7 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :phone, :address, :city, :zip, :password, :password_confirmation)
+      params.require(:user).permit(:first_name, :last_name, :year, :email, :phone, :address, :city, :zip, :password, :password_confirmation)
     end
 
     def signed_in_user

@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
   # attr_accessible :first_name, :last_name, :email, :phone, :address, :city
   has_secure_password
 
+  YEARS = ["=< 8th Grade", "Freshman", "Sophomore", "Junior", "Senior", "H.S. Grad"]
+
   before_save { |user| user.email = email.downcase }
   before_save :create_remember_token
 
@@ -12,10 +14,8 @@ class User < ActiveRecord::Base
   validates :email, presence: true, format: { with: /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i }, uniqueness: { case_sensitive: false }
 #uniqueness inferred by Rails to be true
 
-  validates :phone, presence: true
-  validates :address, presence: true
-  validates :city, presence: true
-  validates :zip, presence: true
+  validates :year, inclusion: YEARS
+  validates :phone, :address, :city, :zip, presence: true
 
   validates :password, presence: true, length: { minimum: 6 }
   validates :password_confirmation, presence: true
