@@ -8,6 +8,8 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       # then sign the user in and redirect to the user's show page
       sign_in user   # need to create this method
+      # remember user
+      params[:session][:remember_me] == '1' ? remember(user) : forget(user)
       # redirect_to user
       redirect_back_or user
     else
@@ -18,8 +20,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    # sign_out
-    session[:user_id] = nil
+    log_out if signed_in?
     redirect_to root_url
   end
 
