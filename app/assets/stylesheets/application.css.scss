@@ -305,7 +305,7 @@ hr {
   margin-bottom: 1rem;
 }
 
-input, textarea {
+input, textarea, .form-control {
   font-size: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -314,6 +314,19 @@ input, textarea {
   font-weight: lighter;
   cursor: auto;
   border-radius: 10px;
+}
+.button {
+ font-size: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-family: "Raleway", sans-serif;
+  color: #4c4c4c;
+  font-weight: lighter;
+  cursor: auto;
+  border-radius: 10px;
+  border: 2px solid purple;
+  text-decoration: none;
+
 }
 
 #error_explanation {

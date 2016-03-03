@@ -19,3 +19,6 @@ User.create!(
   password: "password",
   password_confirmation: "password",
   admin: true)
+
+Testimonial.create!(
+  feedback: "I highly recommend Stephen as a tutor. My daughter was really struggling with an AP course, but with his help, she was able to raise her grade significantly! I could see how having been a Highland Park student, he could relate to her teacher's style. Thanks so much.")
