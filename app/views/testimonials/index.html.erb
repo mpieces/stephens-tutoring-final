@@ -1,27 +1,28 @@
-<p id="notice"><%= notice %></p>
+<div id="reviews">
+  <p id="notice"><%= notice %></p>
 
-<h1>Feedback</h1>
+  <h1>Reviews</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @testimonials.each do |testimonial| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= testimonial.feedback %></td>
-        <td><%= testimonial.name %></td>
-
-        <td><%= link_to 'Destroy', testimonial, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
+    <tbody>
+      <% @testimonials.each do |testimonial| %>
+        <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+          <td><%= testimonial.feedback %></td>
+          <td class="name"><%= testimonial.name %></td>
+
+           <td><%= link_to 'Delete', testimonial, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 <br>
 
 <%= link_to 'Add Feedback!', new_testimonial_path, class: "button" %>

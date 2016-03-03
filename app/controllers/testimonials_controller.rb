@@ -1,6 +1,9 @@
 class TestimonialsController < ApplicationController
-  # before_action :set_testimonial, only: [:show, :edit, :update, :destroy]
 
+  include SessionsHelper
+  # before_action :set_testimonial, only: [:show, :edit, :update, :destroy]
+  # before_action :admin_user, only: :destroy
+  # before_action :signed_in_user, only: [:index, :new, :create]
   # GET /testimonials
   # GET /testimonials.json
   def index
@@ -30,7 +33,7 @@ class TestimonialsController < ApplicationController
 
     respond_to do |format|
       if @testimonial.save
-        format.html { redirect_to testimonials_url, notice: 'Testimonial was successfully created.' }
+        format.html { redirect_to testimonials_url, notice: 'Review was successfully created.' }
         format.json { render :show, status: :created, location: @testimonial }
       else
         format.html { render :new }
@@ -44,7 +47,7 @@ class TestimonialsController < ApplicationController
   def update
     respond_to do |format|
       if @testimonial.update(testimonial_params)
-        format.html { redirect_to @testimonial, notice: 'Testimonial was successfully updated.' }
+        format.html { redirect_to @testimonial, notice: 'Review was successfully updated.' }
         format.json { render :show, status: :ok, location: @testimonial }
       else
         format.html { render :edit }
@@ -58,7 +61,7 @@ class TestimonialsController < ApplicationController
   def destroy
     Testimonial.find(params[:id]).destroy
     # @testimonial.destroy
-    flash[:success] = "Feedback deleted"
+    flash[:success] = "Review deleted"
     redirect_to testimonials_url
   end
 

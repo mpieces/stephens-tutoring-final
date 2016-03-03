@@ -12,6 +12,10 @@ module SessionsHelper
     @current_user ||= User.find_by(id: session[:user_id])
   end
 
+  def admin_user
+      redirect_to(root_url) unless current_user.admin?
+    end
+
   # Returns T if user is logged in, F otherwise
   def signed_in?
     !current_user.nil?
