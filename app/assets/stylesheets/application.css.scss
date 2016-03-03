@@ -12,9 +12,6 @@
  *
  *= require_tree .
  *= require_self
- *= require owl.carousel
- *= require owl.theme
- *= require owl.transitions.css
  */
 
 * {
@@ -158,7 +155,7 @@ h1, h2, h3, h4 {
 }
 
 /*FLASH MESSAGES ***********/
-.flash_notice, .flash_alert {
+.alert {
   padding: 8px 35px 8px 14px;
   margin-bottom: 20px;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
@@ -166,19 +163,9 @@ h1, h2, h3, h4 {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
   line-height: 20px;
-}
-.flash_notice {
-  background-color: #dff0d8;
-  border-color: #d6e9c6;
-  color: #468847;
-}
-.flash_alert {
-  background-color: #f2dede;
-  border-color: #eed3d7;
-  color: #b94a48;
 }
 
 hr {
@@ -188,6 +175,7 @@ hr {
     background: -webkit-linear-gradient(left, transparent, rgba(0,0,0,0.09) 10%, rgba(0,0,0,0.09) 90%, transparent);
 }
 
+// LOGIN/SIGNUP BUTTONS:
 .register-buttons {
   z-index: 10;
   position: absolute;
@@ -217,8 +205,7 @@ hr {
   margin-right: 30px;
 }
 
-
-
+// HOW IT WORKS PAGE:
 #howitworks {
   margin: 0 auto;
   padding-top: 20px;
@@ -230,6 +217,7 @@ hr {
   text-align: left;
 }
 
+// BOOK SESSION BUTTON:
 #book h1 {
   color: #6e5baa;
   position: absolute;
@@ -247,18 +235,13 @@ hr {
   color: white;
 }
 
-/*#calendar {
-  position: absolute;
-  top: 300px;
-  right: 25%;
-  left: 25%;
-}*/
-
+// CONTACT ME PAGE:
 #contact {
   text-align: center;
   padding-top: 20px;
 }
 
+// SUBJECTS PAGE:
 .subjects {
   width: 500px;
   display: block;
@@ -273,13 +256,41 @@ hr {
     list-style-type: none;
 }
 
+// ABOUT ME PAGE:
 #about {
   padding-top: 20px;
-  text-align: center;
-  width: 500px;
+  text-align: left;
+  width: 700px;
   margin-left: auto;
   margin-right: auto;
+  z-index: 10;
+}
 
+#hp {
+  height: 62px;
+  width: 100px;
+  float: right;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#uva {
+  height: 120px;
+  width: 120px;
+  float: left;
+  margin-right: 10px;
+}
+
+#portrait {
+  float: left;
+  margin-right: 30px;
+}
+
+#cc {
+  float: right;
+  z-index: 5;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 /*FORMs: */
@@ -304,7 +315,7 @@ input, textarea {
   cursor: auto;
   border-radius: 10px;
 }
-/* Keep:*/
+
 #error_explanation {
   color: red;
   ul {
@@ -314,12 +325,6 @@ input, textarea {
   }
 }
 
-/*.field_with_errors {
-  @extend .has_error;
-  .form-control {
-    color: $state-danger-text;
-  }
-}*/
 
 .alert-alert-success {
   font-family: "Raleway", sans-serif;
