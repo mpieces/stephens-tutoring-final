@@ -29,11 +29,14 @@
 
 html, body {
   height: 100%;
-
 }
 
 body {
   background: #c7c0de;
+}
+
+#wrap {
+  min-height: 100%;
 }
 
 #content {
@@ -43,15 +46,33 @@ body {
   height: 100%;
   width: 1000px;
   margin: 0 auto;
+  // took out -2em
   background-color: white;
-  padding: 20px;
-  margin-bottom: -100px;
+  padding: 60px;
+  padding-bottom: 120px;   // must be same height as footer
+  overflow: auto;
+  // margin-bottom: -100px;
 }
 
-/*#content:after {
-  content: "";
-  display: block;
-}*/
+#footer {
+  position: relative;
+  margin-top: -60px; // negative value of footer height
+  height: 60px;
+  clear: both;
+
+  background-color: #3B2F63;
+  background-image: radial-gradient(circle at 50% top, rgba(84,90,182,0.6) 0%, rgba(84,90,182,0) 75%),radial-gradient(circle at right top, #794aa2 0%, rgba(121,74,162,0) 57%);
+}
+
+#footer p {
+  color: white;
+  text-align: right;
+}
+
+#footer a {
+  color: white;
+  text-align: right;
+}
 
 #header {
   position: relative;
@@ -184,6 +205,10 @@ hr {
 }
 
 // LOGIN/SIGNUP BUTTONS:
+
+.register-wrap {
+  height: 200px;
+}
 .register-buttons {
   z-index: 10;
   position: absolute;
@@ -202,15 +227,38 @@ hr {
   padding: 30px;
   text-align: center;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50), inset 0px 1px 3px 0px rgba(0,0,0,0.50);
+  background: #6e5baa;
+  color: white;
 }
 
 .register-buttons a:hover {
-  background: #3b2f63;
+  // background: #3b2f63;
+  // color: white;
   color: white;
+  background: #3b2f63;
 }
 
 #login {
   margin-right: 30px;
+}
+
+// BOOK SESSION BUTTON (ON PROFILE PAGE):
+#book h1 {
+  position: absolute;
+  top: 200px;
+  right: 300px;
+  border: 3px solid #3b2f63;
+  border-radius: 3px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  background: #6e5baa;
+  color: white;
+}
+
+#book h1:hover {
+  color: white;
+  background: #3b2f63;
 }
 
 // HOW IT WORKS PAGE:
@@ -229,23 +277,7 @@ hr {
   text-align: left;
 }
 
-// BOOK SESSION BUTTON:
-#book h1 {
-  color: #6e5baa;
-  position: absolute;
-  top: 340px;
-  right: 400px;
-  border: 3px solid #6e5baa;
-  border-radius: 3px;
-  padding: 20px;
-  width: 250px;
-  text-align: center;
-}
 
-#book h1:hover {
-  background: #3b2f63;
-  color: white;
-}
 
 // CONTACT ME PAGE:
 #contact {
