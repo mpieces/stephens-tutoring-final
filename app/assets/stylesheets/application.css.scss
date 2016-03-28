@@ -39,41 +39,6 @@ body {
   min-height: 100%;
 }
 
-#content {
-  position: relative;
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  width: 1000px;
-  margin: 0 auto;
-  // took out -2em
-  background-color: white;
-  padding: 60px;
-  padding-bottom: 120px;   // must be same height as footer
-  overflow: auto;
-  // margin-bottom: -100px;
-}
-
-#footer {
-  position: relative;
-  margin-top: -60px; // negative value of footer height
-  height: 60px;
-  clear: both;
-
-  background-color: #3B2F63;
-  background-image: radial-gradient(circle at 50% top, rgba(84,90,182,0.6) 0%, rgba(84,90,182,0) 75%),radial-gradient(circle at right top, #794aa2 0%, rgba(121,74,162,0) 57%);
-}
-
-#footer p {
-  color: white;
-  text-align: right;
-}
-
-#footer a {
-  color: white;
-  text-align: right;
-}
-
 #header {
   position: relative;
   width: 100%;
@@ -85,6 +50,7 @@ body {
 }
 
 #logo {
+  text-align: center;
   margin: 0 auto;
   position: absolute;
   left: 614px;
@@ -110,8 +76,9 @@ body {
   color: #c7c0de;
   text-align: center;
   padding-top: 10px;
-
 }
+
+
 #navbar ul {
   position: absolute;
   top: 0;
@@ -167,6 +134,44 @@ body {
 #r-navbar a:selected {
   color: white;
 }
+
+#content {
+  position: relative;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  width: 1000px;
+  margin: 0 auto;
+  // took out -2em
+  background-color: white;
+  padding: 60px;
+  padding-bottom: 120px;   // must be same height as footer
+  overflow: auto;
+  // margin-bottom: -100px;
+}
+
+#footer {
+  position: relative;
+  margin-top: -60px; // negative value of footer height
+  height: 60px;
+  clear: both;
+
+  background-color: #3B2F63;
+  background-image: radial-gradient(circle at 50% top, rgba(84,90,182,0.6) 0%, rgba(84,90,182,0) 75%),radial-gradient(circle at right top, #794aa2 0%, rgba(121,74,162,0) 57%);
+}
+
+#footer p {
+  color: white;
+  text-align: right;
+}
+
+#footer a {
+  color: white;
+  text-align: right;
+}
+
+
+
 
 
 ul, li, p, td {
