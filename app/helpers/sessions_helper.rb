@@ -40,7 +40,7 @@ module SessionsHelper
     redirect_to(root_url) unless user == current_user
   end
 
-  # Redirects to stored location ( or to the default)
+  # Redirects to stored location (or to the default)
   def redirect_back_or(default)
     redirect_to(session[:forwarding_url] || default)
     session.delete(:forwarding_url)

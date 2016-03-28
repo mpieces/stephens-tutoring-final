@@ -5,30 +5,19 @@ class TestimonialsController < ApplicationController
   before_action :admin_user, only: :destroy
   # before_action :signed_in_user, only: [:index, :new, :create]
 
-  # GET /testimonials
-  # GET /testimonials.json
   def index
     @testimonials = Testimonial.all
     @user = current_user
   end
 
-  # GET /testimonials/1
-  # GET /testimonials/1.json
   def show
     @testimonial = Testimonial.find(params[:id])
   end
 
-  # GET /testimonials/new
   def new
     @testimonial = Testimonial.new
   end
 
-  # GET /testimonials/1/edit
-  # def edit
-  # end
-
-  # POST /testimonials
-  # POST /testimonials.json
   def create
     @testimonial = Testimonial.new(testimonial_params)
 
@@ -43,8 +32,6 @@ class TestimonialsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /testimonials/1
-  # PATCH/PUT /testimonials/1.json
   def update
     respond_to do |format|
       if @testimonial.update(testimonial_params)
@@ -57,14 +44,13 @@ class TestimonialsController < ApplicationController
     end
   end
 
-  # DELETE /testimonials/1
-  # DELETE /testimonials/1.json
   def destroy
     Testimonial.find(params[:id]).destroy
-    # @testimonial.destroy
     flash[:success] = "Review deleted"
     redirect_to testimonials_url
   end
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -72,14 +58,8 @@ class TestimonialsController < ApplicationController
       @testimonial = Testimonial.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def testimonial_params
       params.require(:testimonial).permit(:feedback, :name)
-    end
-
-
-    def admin_user
-      redirect_to(root_url) unless current_user.admin?
     end
 
 end
