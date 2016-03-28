@@ -2,8 +2,9 @@ class TestimonialsController < ApplicationController
 
   include SessionsHelper
   # before_action :set_testimonial, only: [:show, :edit, :update, :destroy]
-  # before_action :admin_user, only: :destroy
+  before_action :admin_user, only: :destroy
   # before_action :signed_in_user, only: [:index, :new, :create]
+
   # GET /testimonials
   # GET /testimonials.json
   def index
@@ -74,6 +75,11 @@ class TestimonialsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def testimonial_params
       params.require(:testimonial).permit(:feedback, :name)
+    end
+
+
+    def admin_user
+      redirect_to(root_url) unless current_user.admin?
     end
 
 end

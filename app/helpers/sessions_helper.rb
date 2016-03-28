@@ -14,7 +14,7 @@ module SessionsHelper
 
   def admin_user
       redirect_to(root_url) unless current_user.admin?
-    end
+  end
 
   # Returns T if user is logged in, F otherwise
   def signed_in?
